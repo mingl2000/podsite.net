@@ -31,7 +31,10 @@
 **create plan**
     * spec.md
     * GTP-5:
-    * /speckit.plan I am going to use Next.js with static site configuration, no databases - data is embedded in the content for the mock episodes. Site is responsive and ready for mobile.
+    * /speckit.plan I am going to use asp.net core with static site configuration, no databases - data is embedded in the content for the mock episodes. Site is responsive and ready for mobile. 
+    * Outcome:
+        plan.md
+
 **Create tasks**
     * plan.md
     * agent

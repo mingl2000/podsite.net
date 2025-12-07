@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Episode",
+  "type": "object",
+  "required": ["title","date","slug","summary"],
+  "properties": {
+    "title": { "type": "string", "minLength": 1 },
+    "date": { "type": "string", "format": "date" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "summary": { "type": "string" },
+    "description": { "type": "string" },
+    "duration": { "type": "string" },
+    "coverImage": { "type": "string" },
+    "audioUrl": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}
