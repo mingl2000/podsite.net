@@ -1,0 +1,31 @@
+name: Build Static Site
+
+on:
+  push:
+    branches: [001-modern-podcast-site, main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0'
+      - name: Build site
+        run: |
+          cd site
+          pwsh -Command "./tools/build.ps1"
+      - name: Verify output
+        run: |
+          if [ ! -f "site/output/index.html" ]; then
+            echo "ERROR: index.html not generated"
+            exit 1
+          fi
+          if [ ! -f "site/output/episodes/index.html" ]; then
+            echo "ERROR: episodes/index.html not generated"
+            exit 1
+          fi
+          echo "✓ Build verification passed"

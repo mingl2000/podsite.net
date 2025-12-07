@@ -45,7 +45,7 @@
     * tasks.md
     * Agent
     * Claude Haiku 4.5:
-    * Implement the tasks for this project, and update the task list as you go.
+    * Implement the tasks for this project in src/ folder, and update the task list as you go.
     * outcome: the web site code.
     
 **Build**
